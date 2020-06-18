@@ -13,11 +13,11 @@ This README would normally document whatever steps are necessary to get your app
 
 	`sudo apt install git`
 
-	`git clone https://marcelovasconcellos@bitbucket.org/marcelovasconcellos/install-hadoop-spark-ubuntu-18.04.3.git`
+	`git clone https://github.com/marcelomdevasconcellos/Install-Hadoop-Spark-Ubuntu-18.04.git`
 
 3. Execute the command:
 
-	`cd install-hadoop-spark-ubuntu-18.04`
+	`cd Install-Hadoop-Spark-Ubuntu-18.04`
 	
 	`source install_hadoop_spark_ubuntu.sh`
 
