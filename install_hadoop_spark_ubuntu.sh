@@ -32,7 +32,7 @@ do
         Yes ) 
             echo "Installing Hadoop 3.2.1 ..."
             # https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
-            
+
             rm *.tar.gz
             wget https://mirrors.whoishostingthis.com/apache/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
             sudo tar -xvf hadoop-3.2.1.tar.gz -C /opt/
@@ -100,16 +100,16 @@ select yn in Yes No
 do
     case $yn in
         Yes ) 
-			echo "Configuring Hadoop ..."
-			# https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
+            echo "Configuring Hadoop ..."
+            # https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
 
-			cp hadoop-config/core-site.xml /opt/hadoop/etc/hadoop/core-site.xml 
-			cp hadoop-config/hdfs-site.xml /opt/hadoop/etc/hadoop/hdfs-site.xml
-			sudo mkdir -p /opt/hadoop_tmp/hdfs/datanode
-			sudo mkdir -p /opt/hadoop_tmp/hdfs/namenode
-			sudo chown $USER:$USER -R /opt/hadoop_tmp
-			cp hadoop-config/mapred-site.xml /opt/hadoop/etc/hadoop/mapred-site.xml 
-			cp hadoop-config/yarn-site.xml /opt/hadoop/etc/hadoop/yarn-site.xml
+            cp hadoop-config/core-site.xml /opt/hadoop/etc/hadoop/core-site.xml 
+            cp hadoop-config/hdfs-site.xml /opt/hadoop/etc/hadoop/hdfs-site.xml
+            sudo mkdir -p /opt/hadoop_tmp/hdfs/datanode
+            sudo mkdir -p /opt/hadoop_tmp/hdfs/namenode
+            sudo chown $USER:$USER -R /opt/hadoop_tmp
+            cp hadoop-config/mapred-site.xml /opt/hadoop/etc/hadoop/mapred-site.xml 
+            cp hadoop-config/yarn-site.xml /opt/hadoop/etc/hadoop/yarn-site.xml
             break;;
         No ) 
             break;;
@@ -122,12 +122,12 @@ select yn in Yes No
 do
     case $yn in
         Yes ) 
-			echo "Installing OpenSSH ..."
-			# https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
+            echo "Installing OpenSSH ..."
+            # https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
 
-			which sshd
-			sudo apt install openssh-server
-			sudo systemctl status ssh
+            which sshd
+            sudo apt install openssh-server
+            sudo systemctl status ssh
             source ~/.bashrc
             break;;
         No ) 
@@ -141,11 +141,11 @@ select yn in Yes No
 do
     case $yn in
         Yes ) 
-			echo "Creating KeyGen ..."
-			# https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
+            echo "Creating KeyGen ..."
+            # https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
 
-			ssh-keygen
-			cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+            ssh-keygen
+            cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
             break;;
         No ) 
             break;;
@@ -158,13 +158,13 @@ select yn in Yes No
 do
     case $yn in
         Yes ) 
-			echo "Formatting and Booting HDFS ..."
-			# https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
+            echo "Formatting and Booting HDFS ..."
+            # https://dev.to/awwsmm/installing-and-running-hadoop-and-spark-on-ubuntu-18-393h
 
-			hdfs namenode -format -force
-			start-dfs.sh && start-yarn.sh
-			hdfs dfs -mkdir /bigdata
-			hdfs dfs -ls /
+            hdfs namenode -format -force
+            start-dfs.sh && start-yarn.sh
+            hdfs dfs -mkdir /bigdata
+            hdfs dfs -ls /
             break;;
         No ) 
             break;;
