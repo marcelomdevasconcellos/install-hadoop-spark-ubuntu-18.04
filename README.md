@@ -7,7 +7,9 @@ This README would normally document whatever steps are necessary to get your app
 
 1. Open on Ubuntu 18.04 (LTS) x64 Terminal or access your cloud with ssh, using the command below:
 
-	`ssh root@<ip_number>`
+	`ssh <user>@<ip_number>`
+
+	**Attention: Never use "root" user!**
 
 2. Execute the command for clone this repository:
 
