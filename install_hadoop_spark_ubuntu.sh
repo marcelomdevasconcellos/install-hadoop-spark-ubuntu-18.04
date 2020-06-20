@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Do you wish to install Java 8.0.252.hs-adpt ?"
+echo "Do you want to install Java 8.0.252.hs-adpt ?"
 select yn in Yes No
 do
     case $yn in
@@ -25,7 +25,7 @@ do
 done
 
 
-echo "Do you wish to install Hadoop 3.2.1 ?"
+echo "Do you want to install Hadoop 3.2.1 ?"
 select yn in Yes No
 do
     case $yn in
@@ -55,7 +55,7 @@ do
 done
 
 
-echo "Do you wish to install Spark 3.0.0 ?"
+echo "Do you want to install Spark 3.0.0 ?"
 select yn in Yes No
 do
     case $yn in
@@ -95,7 +95,7 @@ do
 done
 
 
-echo "Do you wish to configure Hadoop ?"
+echo "Do you want to configure Hadoop ?"
 select yn in Yes No
 do
     case $yn in
@@ -117,7 +117,7 @@ do
 done
 
 
-echo "Do you wish to install OpenSSH ?"
+echo "Do you want to install OpenSSH ?"
 select yn in Yes No
 do
     case $yn in
@@ -136,7 +136,7 @@ do
 done
 
 
-echo "Do you wish to create KeyGen ?"
+echo "Do you want to create KeyGen ?"
 select yn in Yes No
 do
     case $yn in
@@ -153,7 +153,7 @@ do
 done
 
 
-echo "Do you wish to format and boot HDFS ?"
+echo "Do you want to format and boot HDFS ?"
 select yn in Yes No
 do
     case $yn in
@@ -172,7 +172,7 @@ do
 done
 
 
-echo "Do you wish to install Mongodb ?"
+echo "Do you want to install Mongodb ?"
 select yn in Yes No
 do
     case $yn in
@@ -190,7 +190,26 @@ do
 done
 
 
-echo "Do you wish to install FTP?"
+echo "Do you want to install Mongodb Compass Community ?"
+select yn in Yes No
+do
+    case $yn in
+        Yes ) 
+            echo "Installing Mongodb Compass Community ..."
+            
+            apt-get update
+            sudo apt --fix-broken install
+            wget https://downloads.mongodb.com/compass/mongodb-compass-community_1.21.2_amd64.deb
+            sudo dpkg -i mongodb-compass-community_1.21.2_amd64.deb
+            # mongodb-compass-community
+            break;;
+        No ) 
+            break;;
+    esac
+done
+
+
+echo "Do you want to install FTP?"
 select yn in Yes No
 do
     case $yn in
@@ -236,7 +255,7 @@ do
 done
 
 
-echo "Do you wish to install mysql-server?"
+echo "Do you want to install mysql-server?"
 select yn in Yes No
 do
     case $yn in
@@ -272,6 +291,12 @@ echo "$ spark-shell"
 echo ""
 echo "If you want to stop the HDFS, you can run the commands:"
 echo "$ stop-dfs.sh && stop-yarn.sh"
+echo ""
+echo "If you want to start Mongodb:"
+echo "$ sudo systemctl status mongodb"
+echo ""
+echo "If you want to use Mongodb Compass Community:"
+echo "$ mongodb-compass-community"
 echo ""
 echo ""
 
