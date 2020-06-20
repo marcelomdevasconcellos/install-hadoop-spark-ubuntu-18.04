@@ -30,6 +30,7 @@ This README would normally document whatever steps are necessary to get your app
 * Hadoop 3.2.1
 * Spark 3.0.0
 * Mongodb
+* Mongodb Compass Community
 * Mysql
 * FTP
 
