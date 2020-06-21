@@ -1,17 +1,17 @@
 # README - Install Hadoop Spark Ubuntu 18.04 #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This README document steps necessary to get your application up and running.
 
 
 ### How to install? ###
 
-1. Open on Ubuntu 18.04 (LTS) x64 Terminal or access your cloud with ssh, using the command below:
+1. Open Ubuntu 18.04 (LTS) x64 Terminal or access your cloud with ssh, using the command below:
 
 	`ssh <user>@<ip_number>`
 
 	**Attention: Never use "root" user!**
 
-2. Execute the command for clone this repository:
+2. Execute the command to clone this repository:
 
 	`sudo apt install git`
 
